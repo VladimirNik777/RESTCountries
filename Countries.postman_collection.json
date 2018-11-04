@@ -1,0 +1,968 @@
+{
+	"info": {
+		"_postman_id": "06ce7335-9e3a-4647-9e5a-f62e24fa6340",
+		"name": "Countries",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All countries",
+			"item": [
+				{
+					"name": "[+] ALL",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"all"
+							]
+						},
+						"description": "All countries"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "country by NAME",
+			"item": [
+				{
+					"name": "[+] country by NAME Afghan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/name/Afghan",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"name",
+								"Afghan"
+							]
+						},
+						"description": "country by NAME\n\nreturns country by name and denonym"
+					},
+					"response": []
+				},
+				{
+					"name": "[+] country by NAME Latvia",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/name/Latvia",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"name",
+								"Latvia"
+							]
+						},
+						"description": "country by NAME\n\nreturns country by name and denonym"
+					},
+					"response": []
+				},
+				{
+					"name": "[+] country by NAME Zimbabwe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/name/Zimbabwe",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"name",
+								"Zimbabwe"
+							]
+						},
+						"description": "country by NAME\n\nreturns country by name and denonym"
+					},
+					"response": []
+				},
+				{
+					"name": "[-] country by NAME empty",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/name/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"name",
+								""
+							]
+						},
+						"description": "country by NAME\n\nreturns country by name and denonym"
+					},
+					"response": []
+				},
+				{
+					"name": "[-] country by NAME non-existent",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/name/z",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"name",
+								"z"
+							]
+						},
+						"description": "country by NAME\n\nreturns country by name and denonym"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "search country by FULL NAME",
+			"item": [
+				{
+					"name": "[+] search country by FULL NAME Estonia",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/name/estonia?fullText=true",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"name",
+								"estonia"
+							],
+							"query": [
+								{
+									"key": "fullText",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[-] search country by FULL NAME Estonia, fullText=false",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/name/estonia?fullText=false",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"name",
+								"estonia"
+							],
+							"query": [
+								{
+									"key": "fullText",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[-] search country by FULL NAME Estonia, fullText=",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/name/estonia?fullText=",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"name",
+								"estonia"
+							],
+							"query": [
+								{
+									"key": "fullText",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "search by country CODE",
+			"item": [
+				{
+					"name": "[+] search by country CODE 2-letter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/alpha/co",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"alpha",
+								"co"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[+] search by country CODE 3-letter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/alpha/col",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"alpha",
+								"col"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[-] search by country CODE Empty Code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/alpha/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"alpha",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "search by country CODE List",
+			"item": [
+				{
+					"name": "[+] search by country CODE List col;no;ee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/alpha?codes=col;no;ee",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"alpha"
+							],
+							"query": [
+								{
+									"key": "codes",
+									"value": "col;no;ee"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "search by CURRENCY",
+			"item": [
+				{
+					"name": "[+] search by CURRENCY code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/currency/cop",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"currency",
+								"cop"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "search by LANGUAGE code",
+			"item": [
+				{
+					"name": "[+] search by LANGUAGE code es",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/lang/es",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"lang",
+								"es"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "search by CAPITAL CITY",
+			"item": [
+				{
+					"name": "[+] search by CAPITAL CITY tallinn",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/capital/tallinn",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"capital",
+								"tallinn"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "search by CALLING CODE",
+			"item": [
+				{
+					"name": "[+] search by CALLING CODE 372",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/callingcode/372",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"callingcode",
+								"372"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[-] search by CALLING CODE 111",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/callingcode/111",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"callingcode",
+								"111"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "search by REGION",
+			"item": [
+				{
+					"name": "[+] search by REGION Africa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/region/africa",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"region",
+								"africa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[+] search by REGION Americas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/region/americas",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"region",
+								"americas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[+] search by REGION Asia",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/region/asia",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"region",
+								"asia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[+] search by REGION Europe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/region/europe",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"region",
+								"europe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[+] search by REGION Oceania",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/region/oceania",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"region",
+								"oceania"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "search by REGIONAL BLOC",
+			"item": [
+				{
+					"name": "[+] REGIONAL BLOC eu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/regionalbloc/eu",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"regionalbloc",
+								"eu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[+] REGIONAL BLOC efta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/regionalbloc/efta",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"regionalbloc",
+								"efta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[+] REGIONAL BLOC caricom",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/regionalbloc/caricom",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"regionalbloc",
+								"caricom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[+] REGIONAL BLOC pa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/regionalbloc/pa",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"regionalbloc",
+								"pa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[+] REGIONAL BLOC au",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/regionalbloc/au",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"regionalbloc",
+								"au"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[+] REGIONAL BLOC usan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/regionalbloc/usan",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"regionalbloc",
+								"usan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[+] REGIONAL BLOC eeu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/regionalbloc/eeu",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"regionalbloc",
+								"eeu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[+] REGIONAL BLOC al",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/regionalbloc/al",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"regionalbloc",
+								"al"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[+] REGIONAL BLOC asean",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/regionalbloc/asean",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"regionalbloc",
+								"asean"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[+] REGIONAL BLOC cais",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/regionalbloc/cais",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"regionalbloc",
+								"cais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[+] REGIONAL BLOC cefta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/regionalbloc/cefta",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"regionalbloc",
+								"cefta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[+] REGIONAL BLOC nafta",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/regionalbloc/nafta",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"regionalbloc",
+								"nafta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[+] REGIONAL BLOC saarc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/regionalbloc/saarc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"regionalbloc",
+								"saarc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[-] REGIONAL BLOC non-existent abcd",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/regionalbloc/abcd",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"regionalbloc",
+								"abcd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FILTER RESPONSE",
+			"item": [
+				{
+					"name": "FILTER RESPONSE name, capital, currencies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/all?fields=name;capital;currencies",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"all"
+							],
+							"query": [
+								{
+									"key": "fields",
+									"value": "name;capital;currencies"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FILTER RESPONSE name, region",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/all?fields=name;region",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"all"
+							],
+							"query": [
+								{
+									"key": "fields",
+									"value": "name;region"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
